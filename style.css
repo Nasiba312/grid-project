@@ -2,9 +2,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary:#6C5CE7;
+  --text:#2D3436;
+  --accent1:#FDCB6E;
+  --accent2: #55EFC4;
+}
+
 body {
-  font-family: sans-serif;
+  font-family:'Inter', sans-serif;
   margin: 0px;
+  color: var(--text);
+}
+button {
+  font-family: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
 }
 
 h1,h2,h3,p {
@@ -14,4 +29,108 @@ h1,h2,h3,p {
 ul,ol {
   margin: 0;
   padding: 0;
+}
+
+.center {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+  font-size: 24px;
+}
+
+.header-wraper {
+  height: 96px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 16px 0;
+  box-shadow: 
+  0px 2px 4px rgba(38, 50, 56, 0.16),
+  0px 4px 8px rgba(38, 50, 56, 0.08);
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+}
+
+.logo__text {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.main-nav__link {
+  font-size: 18px;
+  color: var(--primary);
+  text-decoration: none;
+  margin: 0 16px;
+}
+.main-nav_link--active {
+  font-weight: 700;
+  color: var(--text);
+  
+}
+.main-nav__divider {
+  color: var(--accent1);
+  font-size: 18px;
+  font-weight: bold;
+}
+.header__btn {
+  font-weight: bold;
+  font-size: 24px;
+  Width:170px;
+  Height: 64px;
+  border-radius: 32px;
+  text-shadow: 0px 2px 4px rgba(38, 50, 56, 0.16), 0px 4px 8px rgba(38, 50, 56, 0.08);
+}
+
+.intro {
+  padding-top: 80px;
+}
+
+.intro__title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 64px;
+}
+
+.intro__title strong {
+  vertical-align: top;
+  font-size: 96px;
+  font-weight: 800px;
+}
+
+.accent-text {
+  color:#D63031;
+  position: relative;
+  text-shadow: 0 4px 0 #FFFFFF;
+}
+.accent-text span {
+  position: relative;
+  z-index: 2;
+}
+
+.accent-text::after{
+  position: absolute;
+  left: -4px;
+  bottom: -5px;
+  content: "";
+  display: inline-block;
+  width: 191px;
+  height: 51px;
+  border-radius: 26px;
+  background: var(--accent2);
 }
